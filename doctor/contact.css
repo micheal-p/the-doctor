@@ -1,0 +1,234 @@
+
+body{
+    max-width: 1200px; /* Adjust this value to your preference */
+    margin: 0 auto; /* Center the page horizontally */
+    padding: 20px; /* Add padding to the body */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+.contact-container {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 2%;
+    flex: 1;
+}
+.typewriter-text {
+    font-family: monospace;
+    white-space: pre-line;
+    margin-top: 5%;
+    margin-right: 6%;
+    word-break: break-word;
+    line-height: 1.2; /* Adjust line height for better readability */
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+
+
+/* Heading styles */
+h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: garamond;
+
+}
+
+/* Contact links styles */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.contact-link {
+    padding: 5px 10px;
+    transition: transform 0.2s ease;
+    /* Add a smooth transition for the transform property */
+}
+
+.contact-link:hover {
+    transform: translateY(-3px);
+    /* Shift the link 3 pixels up on hover */
+}
+
+/* Contact form styles */
+.contact-form {
+    margin-top: 20px;
+}
+
+/* Label and input styles */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(1, 12, 22);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Login input styles inherited for email and message input fields */
+.input-field {
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 18px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    border: 0.60px rgb(1, 12, 22) solid;
+    border-radius: 7.24px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.floating-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.input-field:focus+.floating-label,
+.input-field.filled+.floating-label {
+    top: -12px;
+    left: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+.input-field.filled+.floating-label {
+    top: -12px;
+    left: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+.typewriter-text::after {
+    content: '|'; /* Display the cursor (pipe symbol) */
+    animation: blink 1s step-end infinite; /* Blink animation */
+    font-size: 1em; /* Same size as the text */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0; /* Hide the cursor for half the animation time */
+    }
+}
+/* iPhone 5, 5S, 5C, SE */
+@media (max-width: 320px) {
+    .typewriter-text {
+        display: none;
+    }
+    body {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+    .contact-form {
+        max-width: 100%; 
+    }
+}
+
+/* iPhone 6, 6S, 7, 8 */
+@media (max-width: 375px) {
+    .typewriter-text {
+        display: none;
+    }
+    body {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+    .contact-form {
+        max-width: 100%; 
+    }
+}
+
+/* iPhone 6 Plus, 6S Plus, 7 Plus, 8 Plus */
+@media (max-width: 414px) {
+    .typewriter-text {
+        display: none;
+    }
+    body {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+    .contact-form {
+        max-width: 100%; 
+    }
+}
+
+/* iPhone X, XS, 11 Pro */
+@media (max-width: 375px) and (min-height: 812px) {
+    .typewriter-text {
+        display: none;
+    }
+    body {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+    .contact-form {
+        max-width: 100%; 
+    }
+}
+
+/* iPhone XR, 11 */
+@media (max-width: 414px) and (min-height: 896px) {
+    .typewriter-text {
+        display: none;
+    }
+    body {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+    .contact-form {
+        max-width: 100%; 
+    }
+}
+
+/* Android Phones (example: Google Pixel) */
+@media (max-width: 411px) {
+    .typewriter-text {
+        display: none;
+    }
+    body {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+    .contact-form {
+        max-width: 100%; 
+    }
+}
+
+/* Tablets (example: iPad) */
+@media (max-width: 768px) {
+    .typewriter-text {
+        display: none;
+    }
+    body {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+    .contact-form {
+        max-width: 100%; 
+    }
+}
+

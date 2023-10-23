@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+/* Apply a common font family for readability */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #caffff;
+    margin: 0;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #caffff; /* Semi-transparent background color */
+}
+
+/* Logo container styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo image styles */
+.logo {
+    max-width: 100px; /* Adjust the width as needed */
+    height: auto;
+}
+
+/* Assistant Doctor text styles */
+.assistant-doctor-text {
+    color: #401900;
+    font-size: 24px; /* Adjust the size as needed */
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: Garamond;
+
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: transparent;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu a.dropdown-item:hover {
+    background-color: transparent !important; /* Remove background color on hover */
+    border: 0.5px solid #401900; /* Apply the stroke pattern */
+    color: #401900 !important; /* Change text color on hover */
+}
+
+/* Nav item styles */
+.nav-item a.nav-link:hover {
+    background-color: transparent !important; /* Remove background color on hover */
+    border: 0.5px solid #401900; /* Apply the stroke pattern */
+    color: #401900 !important; /* Change text color on hover */
+}
+
+
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+/* Welcome section styles */
+.welcome {
+    margin: 0 auto; /* Center content horizontally */
+    max-width: 1200px; /* Limit content width for better readability on larger screens */
+    padding: 20px;
+}
+
+/* Title styles */
+.welcome h1 {
+    font-size: 36px; /* Adjust the size as needed */
+    font-weight: bold;
+    margin-bottom: 20px; /* Add spacing below the title */
+    font-family: Garamond;
+    color: #401900;
+}
+
+/* Text paragraph styles */
+.welcome p {
+    font-size: 18px; /* Adjust the size as needed */
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+    color: #401900;
+}
+
+/* Login and signup button styles */
+.login-button, .signup-button {
+    background-color: transparent;
+    border: 0.5px solid #401900; /* Add a 0.5px stroke */
+    color: #401900;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px; /* Adjust the margin-top as needed */
+    font-size: 16px; /* Reduce the font size */
+}
+
+.login-button:hover, .signup-button:hover {
+    background-color: #401900;
+    color: white;
+    border-color: #401900; /* Change border color on hover */
+}
+
+.line {
+    border-bottom: 1.5px solid #401900; 
+    width: 100%; /* Make the line span the full width of the container */
+    margin-top: 20px; /* Adjust the margin to control the distance between the image and the line */
+}
+.line1 {
+    border-bottom: 2px solid #401900; 
+    width: 100%; /* Make the line span the full width of the container */
+    margin-top: 20px; /* Adjust the margin to control the distance between the image and the line */
+}
+.line2 {
+    border-bottom: 2.5px solid #401900; 
+    width: 100%; /* Make the line span the full width of the container */
+    margin-top: 20px; /* Adjust the margin to control the distance between the image and the line */
+}
+.line3 {
+    border-bottom: 3px solid #401900; 
+    width: 100%; /* Make the line span the full width of the container */
+    margin-top: 20px; /* Adjust the margin to control the distance between the image and the line */
+}
+
+img{
+  
+    max-width: 99.7%; /* Make images scale with their container */
+    justify-content: center;
+    border-radius: 10px;
+}
+.footer{
+    width: 70%;
+    position: absolute;
+    margin: 0;
+}
+
+@media (max-width:767px ){
+    .sidefoot{
+        gap: 20x;
+    }
+}
+
+
+
+

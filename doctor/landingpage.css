@@ -1,0 +1,145 @@
+/* Your existing CSS styles here */
+body {
+    background-color: #400040;
+    margin: 0; /* Remove default body margin */
+}
+
+/* Define the inline style to make text pink */
+.pink-text {
+    color:#51da4c;
+}
+
+/* Define a custom class for button text color */
+.pink-button {
+    background-color: transparent;
+    /* border: 0.5px solid #ff8bff; /* Add a 0.5px stroke */ 
+    border: 0.5px solid #51da4c ; /* Add a 0.5px stroke */
+    /* color: #ff8bff; */
+    color: #51da4c;
+}
+
+/* Styles for login and signup buttons */
+.login-button, .signup-button {
+    background-color: transparent;
+    /* border: 0.5px solid #ff8bff; /* Add a 0.5px stroke */ 
+    border: 0.5px solid #51da4c;
+   /*  color: #ff8bff; */
+   color:  #51da4c;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px; /* Adjust the margin-top as needed */
+}
+
+.login-button:hover, .signup-button:hover {
+    /* background-color: #ff8bff; */
+    background-color: #51da4c;
+    color: white;
+    border-color: #51da4c; /* Change border color on hover */
+}
+
+
+/* Styles for the welcome container */
+.welcome {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10vh; /* Adjust the margin-top to move the text down by 30% of the viewport height */
+    padding: 20px;
+    width: 70%;
+}
+
+/* Increase the size of all text except <h1> */
+.welcome p {
+    font-size: 20px; /* Adjust the size as needed */
+    /* Break text into lines with an average of 6 words per line */
+    white-space: pre-line;
+    word-wrap: break-word;
+    max-width: 650px; /* Set a maximum width for text */
+ 
+}
+
+/* Styles for <h1> */
+.welcome h1 {
+    font-size: 52px; /* Adjust the size as needed */
+    font-weight: bold;
+    
+}
+
+.btn {
+    margin: 10px;
+}
+
+/* Style for the robotics image */
+.robotics-img {
+    max-width: 45%; /* Reduce the image size by 30% */
+    height: auto;
+    position: absolute; /* Position the image absolutely within the container */
+    top: -15px; /* Align the image to the top */
+    right: -37%; /* Adjust this value to make it go further to the right */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the logo image */
+.logo {
+    max-width: 100px; /* Adjust the width as needed */
+    height: auto;
+}
+
+/* Style for the Assistant Doctor text */
+.assistant-doctor-text {
+    /* color: #b8b8b8; */
+    color: #51da4c;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* Adjust padding as needed */
+    /* background-color: rgb(1, 12, 22) */; /* Semi-transparent background color */
+    background-color: #400040;
+}
+.navbar {
+    background-color: transparent;
+}
+/* Remove white background and apply stroke pattern for dropdown items */
+.dropdown-menu a.dropdown-item:hover {
+    background-color: transparent !important; /* Remove background color on hover */
+    border: 0.5px solid #51da4c; /* Apply the stroke pattern */
+    color: #51da4c !important; /* Change text color on hover */
+}
+.nav-item a.nav-link:hover {
+    background-color: transparent !important; /* Remove background color on hover */
+    border: 0.5px solid #51da4c; /* Apply the stroke pattern */
+    color: #51da4c !important; /* Change text color on hover */
+}
+
+.typewriter-text::after {
+    content: '|'; /* Display the cursor (pipe symbol) */
+    animation: blink 1s step-end infinite; /* Blink animation */
+    font-size: 1em; /* Same size as the text */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0; /* Hide the cursor for half the animation time */
+    }
+}
+
+/* Add this CSS rule for hiding the image on mobile screens */
+@media (max-width: 767px) {
+    .robotics-img {
+        display: none;
+    }
+}
+
+
