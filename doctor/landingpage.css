@@ -146,5 +146,20 @@ body {
         display: none;
     }
 }
+@media (max-width: 767px) {
+    .welcome h1 {
+    font-size: 35px; /* Adjust the size as needed */
+    font-weight: bold;
+    
+}
+}
+
+@media (max-width: 767px) {
+    h1.pink-text.specific-h1 {
+        font-size: 1.5em; /* Adjust the font size as needed */
+        font-weight: normal; /* Remove bold style if present */
+        /* Add any other styles you want for this specific h1 in mobile view */
+    }
+}
 
 
