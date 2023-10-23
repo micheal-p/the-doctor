@@ -147,7 +147,11 @@ img{
         gap: 20x;
     }
 }
-
+@media (max-width: 767px) {
+    .assistant-doctor-text {
+        display: none;
+    }
+}
 
 
 
