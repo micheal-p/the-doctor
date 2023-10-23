@@ -141,5 +141,10 @@ body {
         display: none;
     }
 }
+@media (max-width: 767px) {
+    .assistant-doctor-text {
+        display: none;
+    }
+}
 
 
