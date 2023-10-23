@@ -161,5 +161,57 @@ body {
         /* Add any other styles you want for this specific h1 in mobile view */
     }
 }
+/* Remove maximum width and adjust font size for iPhone 6 to 13 and Android phones */
+
+/* for mobile screen*/
+@media (max-width: 375px) { /* iPhone 6/7/8 */
+    .welcome p {
+        max-width: none;
+        font-size: 16px;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 414px) { /* iPhone 6/7/8 Plus */
+    .welcome p {
+        max-width: none;
+        font-size: 16px;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 375px) and (min-height: 812px) {
+    .welcome p {
+        max-width: none;
+        font-size: 16px;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 414px) and (min-height: 736px) {
+    .welcome p {
+        max-width: none;
+        font-size: 16px;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 360px) { /* Some Android devices */
+    .welcome p {
+        max-width: none;
+        font-size: 16px;
+        white-space: normal;
+    }
+}
+
+/* Remove maximum width and adjust font size for tablets */
+@media (min-width: 768px) and (max-width: 1024px) { /* Tablets */
+    .welcome p {
+        max-width: none;
+        font-size: 16px;
+        white-space: normal;
+    }
+}
+
 
 
