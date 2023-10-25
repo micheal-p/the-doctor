@@ -14,7 +14,7 @@
             <div class="main">
                 <div class="content">
                     <h2>Assistant Doctor</h2>
-                    <form action="#" method="post" onsubmit="return validateForm()">
+                    <form onsubmit="return validateForm()">
                         <div class="name-fields" style="display: flex; gap: 4px;">
                             <input type="text" id="firstname" name="firstname" placeholder="First Name">
                             <input type="text" id="othername" name="othername" placeholder="Mid Name">
@@ -66,12 +66,14 @@
 
             
             createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed up 
+  // After user is successfully signed up
+.then((userCredential) => {
+    // Signed up
     const user = userCredential.user;
-    // ...
-      window.location.href = 'assistantdoctor.html';
-  })
+    // Redirect to another page
+    window.location.href = 'assistantdoctor.html';
+})
+
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
