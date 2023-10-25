@@ -14,16 +14,17 @@
             <div class="main">
                 <div class="content">
                     <h2>Assistant Doctor</h2>
-                    <form action="#" method="post">
+                    <form action="#" method="post" onsubmit="return validateForm()">
                         <div class="name-fields" style="display: flex; gap: 4px;">
-                            <input type="text" name="firstname" placeholder="First Name">
-                            <input type="text" name="othername" placeholder="Mid Name">
+                            <input type="text" id="firstname" name="firstname" placeholder="First Name">
+                            <input type="text" id="othername" name="othername" placeholder="Mid Name">
                         </div>
-                        <input type="text" name="surname" placeholder="Surname">
-                        <input type="email" name="email" placeholder="Email">
-                        <input type="password" name="password" placeholder="Password">
-                        <input type="password" name="confirm_password" placeholder="Confirm Password">
-                        <button type="submit" class="btn">Sign Up <i class="fas fa-paper-plane"></i></button>
+                        <input type="text" id="surname" name="surname" placeholder="Surname">
+                        <input type="email" id="email" name="email" placeholder="Email">
+                        <input type="password" id="password" name="password" placeholder="Password" required minlength="8">
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required minlength="8" oninput="checkPasswordMatch(this)">
+                        <div id="passwordMismatch" style="color: red; display: none;">Passwords do not match.</div>
+                        <button type="submit" id="signup" class="btn">Sign Up <i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
                 <div class="form-img">
@@ -32,5 +33,102 @@
             </div>
         </div>
     </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDyGGE-Q1aUPCvpm2WwLb6_In9RvZBPWvE",
+            authDomain: "assistant-doctor-4a69a.firebaseapp.com",
+            databaseURL: "https://assistant-doctor-4a69a-default-rtdb.firebaseio.com",
+            projectId: "assistant-doctor-4a69a",
+            storageBucket: "assistant-doctor-4a69a.appspot.com",
+            messagingSenderId: "901255286291",
+            appId: "1:901255286291:web:cafbb8a848dd8c636df9e6"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        document.getElementById('signup').addEventListener('click', (e) => {
+
+            var firstname = document.getElementById('firstname').value
+            var email = document.getElementById('email').value
+            var password = document.getElementById('password').value
+
+
+            
+            createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed up 
+    const user = userCredential.user;
+    // ...
+      window.location.href = 'test.html';
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+
+            
+        });
+
+
+
+
+
+
+
+
+
+
+
+        
+        // Form validation functions
+        function checkPasswordMatch(input) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = input.value;
+            const mismatchMessage = document.getElementById('passwordMismatch');
+
+            if (password !== confirmPassword) {
+                mismatchMessage.style.display = 'block';
+            } else {
+                mismatchMessage.style.display = 'none';
+            }
+        }
+
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const email = document.getElementById('email').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return false; // Prevent form submission
+            }
+
+            if (password.length < 8) {
+                alert('Password must be at least 8 characters long.');
+                return false; // Prevent form submission
+            }
+
+            // Basic email format check using a regular expression
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!email.match(emailPattern)) {
+                alert('Please enter a valid email address.');
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }
+    </script>
 </body>
 </html>
