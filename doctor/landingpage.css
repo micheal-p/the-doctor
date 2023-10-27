@@ -1,6 +1,6 @@
 /* Your existing CSS styles here */
 body {
-    background-color: #400040;
+    background-color: #000808;
     margin: 0; /* Remove default body margin */
 }
 
@@ -106,7 +106,7 @@ body {
     justify-content: space-between;
     padding: 5px; /* Adjust padding as needed */
     /* background-color: rgb(1, 12, 22) */; /* Semi-transparent background color */
-    background-color: #400040;
+    background-color: #000808;
 }
 .navbar {
     background-color: transparent;
@@ -187,5 +187,50 @@ body {
     /* Center the text inside the boxes */
     .navbar-nav .nav-item .nav-link {
         text-align: center;
+    }
+}
+/* Add a media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+    /* Style the mobile menu button */
+    .navbar-toggler.white-bars-button {
+        background: none; /* Remove the background */
+        border: none; /* Remove border if any */
+    }
+
+    /* Style the Font Awesome bars icon to be white */
+    .white-bars-icon {
+        color: white;
+    }
+    
+    /* Reduce text size by 30% in the navbar */
+    .navbar-nav .nav-item .nav-link {
+        font-size: 70%; /* 70% of the original size (30% reduction) */
+    }
+
+    /* Reduce the size of the boxes in the navbar by 20% */
+    .navbar-nav .nav-item {
+        width: 80%; /* 80% of the original size (20% reduction) */
+    }
+
+    /* Center the text inside the boxes */
+    .navbar-nav .nav-item .nav-link {
+        text-align: center;
+    }
+
+    /* Change the menu color to white */
+    .navbar-nav .nav-link {
+        color: white;
+    }
+
+    /* Remove the border and background color from dropdown items */
+    .dropdown-menu a.dropdown-item {
+        background-color: transparent !important;
+        border: none !important;
+        color: #51da4c !important;
+    }
+
+    /* Add spacing between the boxes */
+    .navbar-nav .nav-item:not(:last-child) {
+        margin-right: 10px; /* Adjust the margin as needed */
     }
 }
