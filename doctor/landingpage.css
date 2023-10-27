@@ -108,9 +108,7 @@ body {
     /* background-color: rgb(1, 12, 22) */; /* Semi-transparent background color */
     background-color: #000808;
 }
-.navbar {
-    background-color: transparent;
-}
+
 /* Remove white background and apply stroke pattern for dropdown items */
 .dropdown-menu a.dropdown-item:hover {
     background-color: transparent !important; /* Remove background color on hover */
@@ -233,4 +231,71 @@ body {
     .navbar-nav .nav-item:not(:last-child) {
         margin-right: 10px; /* Adjust the margin as needed */
     }
+
+    
 }
+
+/* Define a media query for mobile screens */
+@media (max-width: 768px) {
+
+    /* Reduce the size of the boxes in the navbar */
+    .navbar-nav .nav-item {
+        width: 110%; /* Adjust the width as needed */
+        margin-right: -200px;
+    }
+
+    /* Remove margin between the text and boxes */
+    .navbar-nav .nav-item .nav-link {
+        margin: 10;
+    }
+
+    /* Center the text inside the boxes */
+   /*  .navbar-nav .nav-item .nav-link {
+        text-align: center;
+    }
+     */
+    /* Adjust padding to touch the edge of the screen */
+    .navbar-nav .nav-item {
+        padding: 0;
+    }
+}
+
+
+
+
+/* Styles for the button */
+#architecture-button {
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff6f61, #51da4c);
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+/* Center the button horizontally and vertically */
+.center-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure it's on top */
+}
+
+/* Styles for the pop-up dialog */
+.architecture-dialog {
+    display: none;
+    position: absolute;
+    background-color: #51da4c;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 30%; /* Adjust the margin-top to move it 30% down from the button */
+    z-index: 1; /* Ensure it's on top of other content */
+}
+
