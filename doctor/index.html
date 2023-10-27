@@ -8,6 +8,8 @@
     <link rel="icon" type="image/png" href="asset/favicon_io/favicon-32x32.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="landingpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
 </head>
 
 <body>
@@ -21,10 +23,10 @@
 
 
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: transparent;">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> <!-- Use the Font Awesome bars icon -->
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
@@ -36,7 +38,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                             style="background-color: transparent;">
                             <a class="dropdown-item" href="#" style="font-size: 20px; color: #51da4c;">Meta-Data</a>
-                            <a class="dropdown-item" href="#" style="font-size: 20px; color: #51da4c;">Beta</a>
+                            <a class="dropdown-item" href="#" style="font-size: 20px; color: #51da4c;">Knowledge
+                                Base</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -60,13 +63,17 @@
             </div>
         </nav>
     </div>
-   <div class="welcome">
+
+
+    <div class="welcome">
         <h1 class="pink-text">Introducing </h1>
         <h4 class="pink-text specific-h1">Assistant Doctor</h4>
         <p class="pink-text typewriter-text" id="typing-text"></p>
-        
+        <div style="display: flex; gap: 9px;">
+            <a href="login.html" class="login-button">Login</a>
+            <a href="signup.html" class="signup-button">Sign Up</a>
 
-
+        </div>
 
         <img src="asset/adjustment.png" alt="" class="robotics-img" style="border-radius: 15px; top: -55px;">
     </div>
