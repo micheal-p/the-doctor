@@ -7,7 +7,7 @@ body {
 /* Apply a common font family for readability */
 body {
     font-family: Arial, sans-serif;
-    background-color: #caffff;
+    background-color: white;
     margin: 0;
 }
 
@@ -16,11 +16,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    background-color: #caffff; /* Semi-transparent background color */
+    padding: 5px;
+    background-color: white; 
 }
 
-/* Logo container styles */
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@ body {
 
 /* Logo image styles */
 .logo {
-    max-width: 100px; /* Adjust the width as needed */
+    max-width: 100px; 
     height: auto;
 }
 
@@ -81,7 +81,7 @@ body {
     font-weight: bold;
     margin-bottom: 20px; /* Add spacing below the title */
     font-family: Garamond;
-    color: #401900;
+    color:  #a8a557;
 }
 
 /* Text paragraph styles */
@@ -103,29 +103,24 @@ body {
     font-size: 16px; /* Reduce the font size */
 }
 
-.login-button:hover, .signup-button:hover {
-    background-color: #401900;
-    color: white;
-    border-color: #401900; /* Change border color on hover */
-}
 
 .line {
-    border-bottom: 1.5px solid #401900; 
+    border-bottom: 1.5px solid #a8a557; 
     width: 100%; /* Make the line span the full width of the container */
     margin-top: 20px; /* Adjust the margin to control the distance between the image and the line */
 }
 .line1 {
-    border-bottom: 2px solid #401900; 
+    border-bottom: 2px solid #a8a557; 
     width: 100%; /* Make the line span the full width of the container */
     margin-top: 20px; /* Adjust the margin to control the distance between the image and the line */
 }
 .line2 {
-    border-bottom: 2.5px solid #401900; 
+    border-bottom: 2.5px solid #a8a557; 
     width: 100%; /* Make the line span the full width of the container */
     margin-top: 20px; /* Adjust the margin to control the distance between the image and the line */
 }
 .line3 {
-    border-bottom: 3px solid #401900; 
+    border-bottom: 3px solid #a8a557; 
     width: 100%; /* Make the line span the full width of the container */
     margin-top: 20px; /* Adjust the margin to control the distance between the image and the line */
 }
@@ -147,9 +142,98 @@ img{
         gap: 20x;
     }
 }
-@media (max-width: 767px) {
-    .assistant-doctor-text {
-        display: none;
+
+
+
+
+
+
+@media (max-width: 768px) {
+    /* Reduce text size by 30% in the navbar */
+    .navbar-nav .nav-item .nav-link {
+        font-size: 70%; /* 70% of the original size (30% reduction) */
+    }
+
+    /* Reduce the size of the boxes in the navbar by 20% */
+    .navbar-nav .nav-item {
+        width: 80%; /* 80% of the original size (20% reduction) */
+    }
+
+    /* Center the text inside the boxes */
+    .navbar-nav .nav-item .nav-link {
+        text-align: center;
+    }
+}
+/* Add a media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+    /* Style the mobile menu button */
+    .navbar-toggler.white-bars-button {
+        background: none; /* Remove the background */
+        border: none; /* Remove border if any */
+    }
+
+    /* Style the Font Awesome bars icon to be white */
+    .white-bars-icon {
+        color: black;
+    }
+    
+    /* Reduce text size by 30% in the navbar */
+    .navbar-nav .nav-item .nav-link {
+        font-size: 70%; /* 70% of the original size (30% reduction) */
+    }
+
+    /* Reduce the size of the boxes in the navbar by 20% */
+    .navbar-nav .nav-item {
+        width: 80%; /* 80% of the original size (20% reduction) */
+    }
+
+    /* Center the text inside the boxes */
+    .navbar-nav .nav-item .nav-link {
+        text-align: center;
+    }
+
+    /* Change the menu color to white */
+    .navbar-nav .nav-link {
+        color: white;
+    }
+
+    /* Remove the border and background color from dropdown items */
+    .dropdown-menu a.dropdown-item {
+        background-color: transparent !important;
+        border: none !important;
+        color: #51da4c !important;
+    }
+
+    /* Add spacing between the boxes */
+    .navbar-nav .nav-item:not(:last-child) {
+        margin-right: 10px; /* Adjust the margin as needed */
+    }
+
+    
+}
+
+/* Define a media query for mobile screens */
+@media (max-width: 768px) {
+
+    /* Reduce the size of the boxes in the navbar */
+    .navbar-nav .nav-item {
+        width: 110%; /* Adjust the width as needed */
+        margin-right: -200px;
+    }
+
+    /* Remove margin between the text and boxes */
+    .navbar-nav .nav-item .nav-link {
+        margin: 10;
+    }
+
+    /* Center the text inside the boxes */
+   /*  .navbar-nav .nav-item .nav-link {
+        text-align: center;
+    }
+     */
+    /* Adjust padding to touch the edge of the screen */
+    .navbar-nav .nav-item {
+        padding: 0;
     }
 }
 
